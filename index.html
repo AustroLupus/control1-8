@@ -47,7 +47,7 @@
               <a class="nav-link active" href="#formulario">Formulario de pedido</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled" href="#">Siga su pedido</a>
+              <a class="nav-link disabled" href="#">Siga su pedido</a> <!--Link inactivo para visualizar la funcionalidad-->
             </li>
             <li class="nav-item">
                 <a class="nav-link active" href="https://github.com/AustroLupus/control1-8">Repositorio GitHub</a>
@@ -267,6 +267,7 @@
                     <div class="col">
                         <label for="comentarios">Comentarios: (opcionales)</label>
                         <textarea class="form-control" rows="5" id="comentarios" placeholder="Indique colores, tallas u otros detalles" name="text"></textarea>
+                        <input type="text" name="origen" value="pedido originado en sitio web" hidden> <!--Campo oculto con información invisible al usuario-->
                     </div>
                 </div>
                 <div class="pt-2">
