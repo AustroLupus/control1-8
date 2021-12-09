@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Carlos Horta">
+    <meta name="description" content="Evaluación Final Modulo 1">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css"></link>
+    <script type="text/javascript" src="./js/bootstrap.bundle.min.js"></script>
+    <style type="text/css">
+        .fondoCabecera{ /* formato de la cabecera y el área del titulo */
+            background-color: lightblue;
+            text-align: center;
+            margin: 0px;
+            padding: 7px;
+            color: darkblue;
+        }
+        header h1{
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-weight: bolder;
+            padding: 20px 0px 5px 0px; /* Declarando un mayor espacio en la parte superior del documento que con el subtítulo */
+        }
+        header p{
+            font-style: italic; /* Cursiva.... porque sí */
+        }
+    </style>
+    <title>Tienda</title>
+</head>
+<body>
+    <header><!--Encabezado de la página-->
+        <div class="fondoCabecera"> <!--La cabecera va con CSS sin Bootstrap-->
+            <h1>Callejón Diagon</h1>
+            <p>El callejón mágico traido a su pantalla</p>
+        </div>
+    </header>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container-fluid">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="#productos">Productos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#envios">Envios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#formulario">Formulario de pedido</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">Siga su pedido</a>
+            </li>
+          </ul>
+        </div>
+      </nav>    
+    <article><!--Carrusel de imagenes en un contenedor-->
+        <div class="row">
+            <div class="col"><!-- Uso de clase .col para controlar el tamaño del carrusel al medio-->
+                <img class="img-fluid mx-auto d-block" src="./img/logoqdtchleft.jpg"><!--Imagen centrada y responsiva-->
+            </div>
+            <div class="col"><!--Ubicar el carusell de imagenes al centro-->
+                <!-- Declaracion del carrusel -->
+                <div id="demo" class="carousel slide" data-bs-ride="carousel">
+                    <!-- Indicadores inferiores -->
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                        <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                        <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+                        <button type="button" data-bs-target="#demo" data-bs-slide-to="4"></button>
+                    </div>
+                    <!-- Imagenes del carrusel -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./img/crsl01.jpg" alt="carrusel 01" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/crsl02.jpg" alt="carrusel 02" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/crsl03.jpg" alt="carrusel 03" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/crsl04.jpg" alt="carrusel 05" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/crsl05.jpg" alt="carrusel 04" class="d-block w-100">
+                        </div>
+                    </div>
+                    <!-- flechas de derecha e izquierda -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="col">
+                <img class="img-fluid mx-auto d-block" src="./img/logoqdtchright.jpg">
+            </div>
+        </div>
+    </article>
+    <article id="productos"><!-- Sección de las imagenes-->
+        <div class="container mt-5"><!--Filas de 3 elementos cada una-->
+            <div class="row">
+                <div class="col-sm-4">
+                    <img src="./img/aros.jpg" class="img-fluid mx-auto d-block" alt="aros" title="Aros de Quidditch"> <!--Imagenes centradas y responsivas--> 
+                    <h3>Aros</h3>
+                    <p>El objetivo principal del juego, donde anotar los puntos y lo que se debe defender.</p>
+                    <p>Viene en set de dos juegos con 3 aros cada uno (un aro central y dos laterales).</p>
+                </div>
+                <div class="col-sm-4">
+                    <img src="./img/bludgerx2.jpg" class="img-fluid mx-auto d-block" alt="buldger" title="Set de buldgers">
+                    <h3>Bludgers</h3>
+                    <p>Construidos de material duradero, estampado y con válvula extraible para guardar sin aire y usar menos espacio</p>
+                    <p>Maleable, lavable y resistente. Paquete promocional de 2 bludgers.</p>
+                </div>
+                <div class="col-sm-4">
+                    <img src="./img/cintillo.jpg" class="img-fluid mx-auto d-block" alt="cintillo" title="Cintillo reversible">
+                    <h3>Cintillos reversibles</h3>
+                    <p>Cintillo reversible para proteger el rostro del cabello, sudor e impactos leves.</p>
+                    <p>Posee colores diferentes en ambos lados para identificar los equipos.</p>
+                </div>
+            </div>
+            <div class="row"><!--Se me ocurrió poner una nueva fila para que los precios se mantengan en un mismo nivel, mas prolijo-->
+                <div class="col-sm-4">
+                    <h4>$120.000.-</h4>
+                </div>
+                <div class="col-sm-4">
+                    <h4>$35.000.-</h4>
+                </div>
+                <div class="col-sm-4">
+                    <h4>$7.500.-</h4>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-sm-4">
+                    <img src="./img/escobas.jpg" class="img-fluid mx-auto d-block" alt="escobas" title="Escobas"> 
+                    <h3>Escobas</h3>
+                    <p>No existe partido de Quidditch sin escobas, este icónico elemento no puede faltar en los partidos.</p>
+                    <p>En variedad disponible sólo como vara o escoba con briznas.</p>
+                </div>
+                <div class="col-sm-4">
+                    <img src="./img/snitch.jpg" class="img-fluid mx-auto d-block" alt="snitch" title="Snitch">   
+                    <h3>Snitch</h3>
+                    <p>Pantalón dorado para el jugador que representa al snitch.</p>
+                    <p>Construido de material resistente, contiene una cola de snitch de tamaño reglamentario al cual se le puede extraer la pelota interior de tenis para lavar o reemplazar.</p>
+                </div>
+                <div class="col-sm-4">
+                    <img src="./img/uniforme.png" class="img-fluid mx-auto d-block" alt="uniforme" title="uniforme">
+                    <h3>Uniforme de competición</h3>
+                    <p>Uniformes de tecnología <span style="font-style: italic;">Fresh 'n' Dry</span> que permite al jugador mantenerse seco y fresco durante los partidos.</p>
+                    <p>Tela resistente al desgaste, con nanopartículas de cobre para evitar la formación de bacterias causantes del mal olor.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <h4>$45.000.-</h4>
+                </div>
+                <div class="col-sm-4">
+                    <h4>$30.000.-</h4>
+                </div>
+                <div class="col-sm-4">
+                    <h4>$60.000.-</h4>
+                </div>
+            </div>
+        </div>
+    </article>
+    <article class="container mt-5" id="envios"><!--Tabla de detalle del costos de envio-->
+        <div class="container mt3">
+            <div class="text-center">
+                <h2>Detalles de envios</h2>
+            </div>
+            <div class="text-justify">
+                <p>Contamos con envío a regiones. Los tiempos y valores pueden variar de acuerdo al volumen de su encargo.</p>
+            </div>
+            <table class="table table-striped"> <!--Bootstrap para darle formato zebra-->
+                <thead>
+                    <tr>
+                        <th>Zona</th>
+                        <th>Pequeño</th>
+                        <th>Mediano</th>
+                        <th>Grande</th>
+                        <th>Tiempo estimado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Norte</td>
+                        <td>$2.000.-</td>
+                        <td>$3.000.-</td>
+                        <td>$4.500.-</td>
+                        <td>7 días</td>
+                    </tr>
+                    <tr>
+                        <td>Centro</td>
+                        <td>$1.500.-</td>
+                        <td>$2.000.-</td>
+                        <td>$3.000.-</td>
+                        <td>4 días</td>
+                    </tr>
+                    <tr>
+                        <td>Metropolitana</td>
+                        <td colspan="3" class="text-center">Sin costo</td> <!--Para ocupar casi toda la fila-->
+                        <td>2 días</td>
+                    </tr>
+                    <tr>
+                        <td>Sur</td>
+                        <td>$2.500.-</td>
+                        <td>$3.500.-</td>
+                        <td>$5.500.-</td>
+                        <td>7 días</td>
+                    </tr>
+                    <tr>
+                        <td>Austral</td>
+                        <td colspan="4" class="text-center"><a href="mailto:contacto@tienda.com">Cotize su envío y despacho</a></td><!-- Y le ponemos un link tipo mail para que se vea que prestamos atencion en clases-->
+                    </tr>
+                </tbody>
+            
+            </table>
+        </div>
+    </article>
+    <article class="container mt-5" id="formulario"><!--Inicio de formulario de cliente-->
+        <div class="container-md pt-5">
+            <div class="text-center">
+                <h2>Formulario de Pedido</h2>
+            </div>
+            <div class="text-justify">
+                <p>Agradeceremos indique los productos que necesita.</p>
+            </div>
+            <form action="./paginaform02.html" method="get">
+                <div class="row">
+                    <div class="col">
+                        <label for="nombre" class="form-label">Nombre Cliente:</label>
+                        <input type="text" class="form-control" placeholder="Ingrese su nombre" name="nombre" required>
+                    </div>
+                    <div class="col">
+                        <label for="rut" class="form-label">Rut Cliente:</label>
+                        <input type="text" class="form-control" placeholder="Ingrese su rut" name="rut" required>
+                    </div>
+                </div>
+                <div class="row pt-2">
+                    <div class="col">
+                        <label for="producto" class="form-label">Producto:</label><!--Menu dropdown para elejir uno de los elementos-->
+                        <div class="dropdown">
+                           <select class="form-select" name="producto">
+                                <option value="aros">Aros</option>
+                                <option value="bludger">Bludgers</option>
+                                <option value="cintillo">Cintillos</option>
+                                <option value="escoba">Escobas</option>
+                                <option value="snitch">Snitch</option>
+                                <option value="uniforme">Uniformes</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <label for="cantidad" class="form-label">Cantidad: (<em>máximo 10 unidades</em>)</label>
+                        <input type="number" class="form-control" name="cantidad" min="0" max="10" required><!--Campo de número limitado desde 0 a 10 unidades-->
+                    </div>
+                </div>
+                <div class="row pt-2">
+                    <div class="col">
+                        <label for="comentarios">Comentarios: (opcionales)</label>
+                        <textarea class="form-control" rows="5" id="comentarios" placeholder="Indique colores, tallas u otros detalles" name="text"></textarea>
+                    </div>
+                </div>
+                <div class="pt-2">
+                <button type="submit" class="btn btn-primary">Enviar</button>
+                </div>
+            </form>
+        </div>
+    
+    </article>
+    <footer>
+        <div class="mt-5 p-4 bg-dark text-white text-center">
+            <p>Gracias por preferir nuestros productos</p>
+            <p>(c) 2021</p>
+          </div>
+    </footer>
+</body>
+</html>
